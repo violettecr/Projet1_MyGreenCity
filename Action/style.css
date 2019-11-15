@@ -1,0 +1,148 @@
+html {
+    background-color: lightgrey;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: #565355;
+}
+
+/* Style heading */
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1{
+    background-color: #EFFF88;
+    border-radius: 3%;
+}
+
+/* Home button */
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links .home {
+    justify-content: flex-start;
+}
+
+div input {
+    width: 100px;
+    height: 60px;
+    border-radius: 15%;
+    background-color: #EFFF88;
+}
+
+/* Image */
+
+div img {
+    float: right;
+    display:block;
+    margin-left:10px;
+    height: 250px;
+    width: 351px;
+    border-radius: 5%;
+  }
+
+/* Style pragraphes */
+
+.info p {
+    text-align:left;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.desc {
+    background-color: #EFFF88;
+    border-radius: 3%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Cache le Burger sur Desktop */
+#page-nav label, #hamburger {
+    display: none;
+}
+
+/* Style du menu ouvert */
+#page-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+  }
+  #page-nav ul li {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  #page-nav ul li a {
+    color: #565355;
+    text-decoration: none;
+  }
+
+
+@media screen and (max-width: 960px) {
+    html {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 25px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    h1 {
+        font-size: 2.3em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    div img {
+        float: none;
+        display: flex;
+        margin: auto;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    div input {
+        width: 150px;
+        height: 80px;
+        border-radius: 15%;
+    }
+    /* Menu Burger fermé */
+    #page-nav label {
+        display: block;
+        float: right;
+        color: #565355;
+        background: #EFFF88;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    #page-nav ul li {
+        display: block;
+        border-top: 1px solid #333;
+    }
+    #page-nav ul {
+        display: none;
+    }
+    #page-nav input:checked ~ ul {
+        display: block;
+    }
+}
+
+/* Rétrécissement de l'image sur grand écran */
+
+@media screen and (min-width: 1248px) {
+    div img {
+        height: 180px;
+        width: 253px;
+    }
+}

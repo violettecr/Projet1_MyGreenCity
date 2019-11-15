@@ -1,0 +1,372 @@
+#picture{
+    background-image: linear-gradient(
+        rgba(204, 194, 194, 0.45),
+        rgba(204, 194, 194, 0.45)), url("../Images/parking-garden.jpeg");
+    background-size: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.titre{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* partie CSS du burger (hors @media) */
+
+/* Cache le Burger sur Desktop */
+#page-nav label, #hamburger {
+    display: none;
+}
+
+/* Style du menu burger ouvert */
+#page-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+  }
+#page-nav ul li {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#page-nav ul li a {
+  color: #565355;
+  text-decoration: none;
+}
+
+@media only screen and (max-width:960px){
+
+/* parti du menu burger dans le @media */
+
+/* Menu Burger fermé */
+#page-nav label {
+    display: block;
+    float: right;
+    color: #565355;
+    background: #EFFF88;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#page-nav ul li {
+    display: block;
+  }
+
+  #page-nav ul li {
+    border-top: 1px solid #333;
+}
+
+#page-nav ul {
+    display: none;
+  }
+
+  #page-nav input:checked ~ ul {
+    display: block;
+}
+
+}
+/* ===================================================================================================================
+/                           * FIN PARTIE NAV */
+/* ===================================================================================================================
+                            * DÉBUT PARTIE HOMEPAGE */
+#homepage * {
+    font-family: "Arial";
+    color: #565355;
+}
+#homepage body{ 
+    width: 100%;
+    margin: 0px;
+    padding:0px;
+}
+#homepage #trans1 {       /*transition des couleurs entre les sections "Actions" et "Associations"*/
+    width: 100%;
+    background: linear-gradient(ivory, beige);
+    height: 100px;
+}
+#homepage #trans2 {       /*transition des couleurs entre les sections "Associations" et "Gestion"*/
+    width: 100%;
+    background: linear-gradient(beige, ivory);
+    height: 100px;
+}
+#homepage #sec1 {         /*couleur de fond section "Actions"*/
+    background-color: ivory;
+}
+#homepage #sec2 {         /*couleur de fond section "Associations"*/
+    background-color: beige;
+}
+#homepage #sec3 {
+    background-color: ivory;
+}
+@media (max-width: 961px) {
+    #homepage #trans1 {       /*transition des couleurs entre les sections "Actions" et "Associations"*/
+        margin-left: -8px;
+    }
+    #homepage #trans2 {        /*transition des couleurs entre les sections "Associations" et "Gestion"*/
+        margin-left: -8px;
+    }
+                            /*SECTION*/
+    #homepage section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: -8px;
+        margin-left: -9px;
+    }
+    #homepage section img {
+        height: auto;
+        width: 80%;
+        border-radius: 10%;
+        box-shadow: 3px 3px 10px grey;
+        margin: 0.8em;
+    }
+    #homepage section p {
+        text-align: justify;
+        min-width: 80%;
+        max-width: 80%;
+    }
+    #homepage #conseils img{
+        min-width: 80%;
+        max-width: 80%;
+        height: auto;
+    }
+                            /*ARTICLE*/
+    #homepage article {
+        padding: 0em 1em 1em 1em;
+    }
+    #homepage article p {
+        margin: auto;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+            /*TITRE*/
+    #homepage #beforeh1 {    
+        content: "";
+        width: 30%;
+        border-bottom: solid 5px #9FEE00;
+        margin: 0;
+    }
+    #homepage h1 {
+        font-size: 3em;
+    }
+    #homepage h2{
+        font-size: 2.5em;
+    }
+    #homepage h3 {
+        width: 60%;
+        text-align: center;
+        background-color: #E3E3D6;
+        border-radius: 4%;
+        padding: 0.5em;
+        box-shadow: 3px 3px 10px #EBEBDE;
+        margin: 40px auto 60px;
+    }
+} 
+@media (min-width: 962px) {
+    /*TITRE*/
+    #homepage #beforeh1 {    
+        content: "";
+        width: 30%;
+        border-top: solid 5px #9FEE00;
+        float: left;
+        }
+    #homepage h1 {
+        font-size: 2.5em;
+        text-align: center;
+        margin: 0 0 20px 0;
+        padding-top: 20px;
+        /*! border-bottom: ; */
+        }
+    #homepage h2{
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    #homepage h3 {
+        width: 70%;
+        text-align: center;
+        background-color: #E3E3D6;
+        border-radius: 4%;
+        padding: 0.5em;
+        box-shadow: 3px 3px 10px #EBEBDE;
+    }
+    /*SECTION*/
+    #homepage #sectionAction {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    #homepage #sectionAssociations {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin: 0px auto;
+        }
+    #homepage #sectionGestion {
+        justify-content: space-evenly;
+    }
+    #homepage section img {
+        border-radius: 10%;
+        box-shadow: 3px 3px 10px grey;
+        margin: 0.8em auto 40px;
+        min-width: 292px;
+        max-width: 394px;
+        min-height: 250px;
+        max-height: 250px;
+    }
+    
+    #homepage p {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    /*ARTICLE*/
+    #homepage article {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-right: 0.9em;
+        padding-left: 0.9em;
+    }
+    #homepage #sectionGestion > article:nth-child(2) {
+        width: 100%;
+    }
+    #homepage article#conseils {
+        width: 100%;
+        padding: inherit;
+        justify-content: center;
+    }
+    #homepage article#collectes{
+        width: 100%;
+        padding: inherit;
+        justify-content: center;
+    }
+    
+} /*Fin du format égal ou supérieur à 961px*/
+/* ===================================================================================================================
+FIN DE LA PARTIE HOMEPAGE */
+/* ===================================================================================================================
+/*DÉBUT PARTIE FOOTER */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.form{
+    display: flexbox;
+    margin: 0px;
+    text-align: center;
+    background-color: ivory;
+}
+h1{
+    color: #565355;
+    margin: 0px;
+    padding: 8px;
+}
+label{
+    color: #565355;
+}
+input{
+    width: 90%;
+    height: 25px;
+    margin: 10px 0px;
+    border: solid 1px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+    -moz-box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+    -webkit-box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+}
+textarea{
+    border-radius: 7px;
+    width: 90%;
+    margin: 10px 0px;
+    box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+    -moz-box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+    -webkit-box-shadow: 0px 0px 6px 7px rgba(119, 119, 119, 0.72);
+}
+.form-submit{
+    color: #565355;
+    width: 80px;
+    margin: 12px 0px;
+}
+.footer{
+    color: black;
+    background-image: url("img/imagedefond.jpg");
+    background-size: 960px 250px;
+    opacity: 0.90;
+    padding: 15px;
+    height: 250px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer div{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+}
+.footer .footer-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+a{
+    color: black;
+    margin: 0px 4px;
+}
+hr{
+    color: white;
+    border: solid 1px;
+    width: 30%;
+}
+img{
+    border-radius: 20px;
+}
+button{
+    border-radius: 15px;
+    background-color: beige;
+}
+@media only screen and (min-width:960px){
+    .label{
+        text-align: left;
+        margin: 0px 10px;
+    }
+    input{
+        width: 80%;
+    }
+    textarea{
+        width: 80%;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 5px;
+        background-image: url("img/imagedefond.jpg");
+        background-size: 1300px 250px;
+    }
+    hr{
+        width: 1px;
+        height: 55px; 
+    }
+}
+/* ===================================================================================================================
+/*FIN PARTIE FOOTER */
+                            
